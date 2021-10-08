@@ -1,0 +1,98 @@
+@charset "utf-8";
+
+* {margin:0; padding:0;}
+li {list-style: none;}
+a {text-decoration:none; color: #333;}
+html, body {font-size: 16px;}
+.menu {display: none;}
+header {
+  height: 80px;
+  background-color: rgba(255, 47, 20, 0.438);  
+  position: fixed;
+  top:0;
+  left:0;
+  z-index: 9;
+  width: 100%;
+}
+.top_menu {
+  max-width: 1440px; 
+  width: 100%;
+  height: 80px;
+  line-height: 80px;
+  margin: 0 auto;
+  text-align: center;
+}
+.top_menu h1 {float: left;}
+nav {width: 40%; display: inline-block;}
+.main li {
+  width: 18%;
+  display: inline-block;
+}
+.right_menu {float: right;}
+
+
+.main_visual {
+  height: 800px;/* 영역에 따라 이미지 높이 달리 표현 - 이미지 여러개 사용 */
+  /*background: url('http://via.placeholder.com/1920x800') center center no-repeat;*/
+  background: url('../img/main01.jpg') center center / cover no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.main_text {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 100%;
+}
+h3 {
+  font-size: 3.5rem;
+  margin-bottom: 35px;
+}
+.cont01 {
+  max-width: 1280px;
+  width: 100%;
+  text-align: center;
+  margin: 0 auto;
+  /*background-color: antiquewhite;*/
+  overflow: hidden;
+  padding: 100px 0;
+}
+.cont01 article {
+  float:left;
+  width: 24%;
+  margin-right: 1%;
+  overflow: hidden;
+}
+/* .cont01 article img {
+  width: 100%;
+} */
+.cont01 article p {
+  /*height: 200px;*/
+  overflow: hidden;
+}
+.cont01 article p img {
+  width: 100%;/* 제외 전후 비교 */
+}
+.cont01 article:last-of-type {
+  margin-right: 0;
+}
+
+@media screen and (max-width: 1024px) {
+  .pc {display: none;}
+  .menu {display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .right_menu {margin-right: 20px;}
+  .cont01 article {
+    width: 49%;  
+    margin-right: 2%; 
+    margin-bottom: 40px;
+  }
+  .cont01 article:nth-of-type(2n) {
+    margin-right:0;
+  }
+}
